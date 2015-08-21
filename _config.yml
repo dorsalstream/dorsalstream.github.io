@@ -9,7 +9,7 @@ highlighter: rouge
 title:               Dorsal Stream
 tagline:             Adventures in Machine Vision and Learning
 url:                 http://mehtadushy.github.io/
-paginate:            1
+paginate:            5
 baseurl:             ""
 
 
