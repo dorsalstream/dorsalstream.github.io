@@ -25,6 +25,8 @@ author:
   name:              Dushyant Mehta
   email:             dmetha@mpi-inf.mpg.de
 
+exclude: postDump
+
 # Custom vars
 version:             1.0.0
 github:
