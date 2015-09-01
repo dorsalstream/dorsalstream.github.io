@@ -1,33 +1,25 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+title:        Dorsal Stream
+tagline:      Insight
+description:  'Some Computer Vision and Machine Learning Musings, Peppered with Occasional Off-topic Philosophical and Non-sensical Ramblings'
+url:          http://mehtadushy.github.io/
+version:      1.0
+
+highlighter:
+
+author:
+  name:       'Dushyant Mehta'
+  email:      'dmetha@mpi-inf.mpg.de'
+
+
+permalink:    pretty
 relative_permalinks: true
-highlighter: rouge
 
-# Setup
-title:               Dorsal Stream
-tagline:             Adventures in Machine Vision and Learning
-url:                 http://mehtadushy.github.io/
-paginate:            5
-baseurl:             ""
+paginate:     5
 
+exclude: [postDump]
 
-# Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-# About/contact
-author:
-  name:              Dushyant Mehta
-  email:             dmetha@mpi-inf.mpg.de
-
-exclude: postDump
-
-# Custom vars
-version:             1.0.0
-github:
-  repo:              https://github.com/mehtadushy/mehtadushy.github.io
+#sass:
+#  sass_dir:          _sass
+#  style:            :compressed

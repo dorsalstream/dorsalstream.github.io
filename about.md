@@ -1,30 +1,15 @@
 ---
 layout: page
-title: About
+title: Crapping Philosophical Robotic Baby Seals!
+tags:
+- intro
+- contact
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+That shall give you a fair gist of what the blog is about. Also the occasional insect.
 
-There are currently two themes built on Poole:
+Built for productive procrastination, by a graduate student, so as to get into a habit of writing regularly. If you wish to give me a shout out and know how to get in touch with me, do get in touch with me, with thoughts, suggestions and what not. If you don't know how to get in touch with me, and are particularly determined to getting in touch with me, you can try contacting me through [G+](https://plus.google.com/100909387498133159339/) or drop a note on the [tweety](https://twitter.com/mehtadushy).
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
 
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+The site is based on [Jekyll](http://jekyllrb.com) and [Hyde](http://mdo.github.io/hyde) hosted at GitHub. Go check them out if you wish to acquire a similar setup for yourself.
