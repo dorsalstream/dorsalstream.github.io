@@ -11,7 +11,9 @@ layout: default
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-date">{{ post.date | date_to_string }}  {% for tag in post.tags %} 
+<a href="/tags#{{tag}}-ref">&nbsp;<span style="text-transform: uppercase; color:#058">{{tag}}</span></a>
+{% endfor %}</span>
 
     {{ post.content }}
   </div>

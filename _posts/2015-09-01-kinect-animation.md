@@ -18,11 +18,11 @@ Mesh space and armature space, converting skeletal deformations to mesh space an
 
 
 
-### Browser support
+### Kinect v2 Skeletal Tracking
 
 
 
-### Documentation
+### Motion Retargeting
 
 
 
