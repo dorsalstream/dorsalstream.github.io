@@ -1,9 +1,6 @@
 ---
 layout: page
-title: Crapping Philosophical Robotic Baby Seals!
-tags:
-- intro
-- contact
+title: Stoic-Cognito-Machinations
 ---
 
 

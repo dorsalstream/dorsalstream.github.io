@@ -228,6 +228,7 @@ a:focus {
   color: #fff;
   background-color: #000;
   background-image: url("bug.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: right top;
 }
