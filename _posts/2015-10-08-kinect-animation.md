@@ -16,7 +16,8 @@ We'll then discuss about the Kinect tracking data format and the typical *motion
 
 ### Skeletal Animations (A Blender Perspective)
 The typical animation pipeline involves creation of a surface mesh with your favorite tool set (*Blender*, *Maya*, whatnot) and attachment of textures and materials to it. Once that is fine and dandy, you are ready to make your mesh move about, and we arrive at the rigging step.
-![mesh_img]({{ site.url }}/_assets/mesh.png?raw=true)
+
+![mesh_img](assets/mesh.png)
 
 Stuff about skeletons and rigging
 Mesh space and armature space, converting skeletal deformations to mesh space and deforming meshes
