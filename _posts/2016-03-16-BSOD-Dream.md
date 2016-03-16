@@ -21,7 +21,7 @@ Coming out of my panicked and confused state, questioning if I was a robot, I re
 
 This is incredibly obvious and has been the staple of productivity guides for ages, and yet is incredibly hard to convey to others without them stumbling upon the realization themselves, much that same way it is with the benefits of exercise (Brady and Grey touch upon this in one of their podcasts). 
 
-So taking inspiration from Grey's almost robotic approach to work and life, I am going to incorporate checklists and note-keeping as a part of my workflow. I used to do that. I wonder why I stopped?
+So taking inspiration from Grey's allegedly robotic approach to work and life, I am going to incorporate checklists and note-keeping as a part of my workflow. I used to do that. I wonder why I stopped?
 I would start with Computer Vision and Data Processing checklists, adding items to them as and when I come across useful insights. I hope to extend this to personal habits too, ritualizing morning and evening routines for optimality of mental and physical well being.
 
 I would, in due time, put up some of the technical checklists so that others may improve upon or benefit from it.
