@@ -5,11 +5,12 @@ tags:
 - productivity
 - dreams
 ---
-Coasting through la la land. Reverie cuts to BSOD. Panic! Half awake. Systems coming back online. 
----
 
-Am I really a robot? I have questions!! Windows on a robot? Why am I a robot?
----
+*Coasting through la la land. Reverie cuts to BSOD. Panic! Half awake. Systems coming back online.*
+
+*Am I really a robot? I have questions!! Windows on a robot? Why am I a robot? ..*
+
+----
   
 
 This is going to be an examination of this particular dream and the consequent recognition of the need for establishing processes in workflow and life. Check out other stuff if you deem this mundane. You have been forewarned.   
