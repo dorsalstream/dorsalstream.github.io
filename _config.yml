@@ -15,7 +15,7 @@ permalink:    pretty
 
 paginate:     5
 
-exclude: [postDump]
+exclude: [untracked_dump]
 
 #
 # We specify the directory for Jekyll so we can use @imports.
