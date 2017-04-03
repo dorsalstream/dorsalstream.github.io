@@ -107,8 +107,8 @@ hr.article_separator {
   position: relative;
   margin: 40px 0;
   border: 0 none;
-  height: 2px;
-  background-color: #141414;
+  height: 4px;
+  background-color: #058;
 }
 
 strong {

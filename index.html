@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+id: main
+comments: true
 ---
 
 <div class="posts">
@@ -15,7 +17,7 @@ layout: default
 <a href="/tags#{{tag}}-ref">&nbsp;<span style="text-transform: uppercase; color:#058">{{tag}}</span></a>
 {% endfor %}</span>
 
-    {{ post.content }}
+    {{ post.excerpt }}
   </div>
   <hr class='article_separator'/>
   {% endfor %}
