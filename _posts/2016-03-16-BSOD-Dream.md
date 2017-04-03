@@ -4,6 +4,7 @@ title: Blue Screen of Death And Recognition Of The Need for Processes and Ritual
 tags:
 - productivity
 - dreams
+id: bsod
 ---
 
 *Coasting through la la land. Reverie cuts to BSOD. Panic! Half awake. Systems coming back online.*
