@@ -6,11 +6,13 @@ version:      1.0
 
 comments:	  true
 
-highlighter:
+markdown: kramdown
+
+highlighter: null
 
 author:
   name:       'Dushyant Mehta'
-  email:      'dmetha@mpi-inf.mpg.de'
+  email:      'dmehta@mpi-inf.mpg.de'
 
 
 permalink:    pretty
