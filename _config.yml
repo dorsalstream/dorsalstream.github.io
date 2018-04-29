@@ -8,7 +8,7 @@ comments:	  true
 
 markdown: kramdown
 
-highlighter: rogue
+highlighter: rouge
 
 author:
   name:       'Dushyant Mehta'
