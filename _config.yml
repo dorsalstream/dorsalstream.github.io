@@ -1,6 +1,6 @@
 title:        Dorsal Stream
 tagline:      ML & CV thoughts, ideas, and rants
-description:  'Computer Vision and Machine Learning'
+description:  'Computer Vision and Machine Learning ~~Coming Soon~~'
 url:          http://dorsalstream.net/
 version:      1.0
 
@@ -18,6 +18,8 @@ author:
 permalink:    pretty
 
 paginate:     5
+
+plugins:	  [jekyll-paginate]
 
 exclude: [untracked_dump]
 
