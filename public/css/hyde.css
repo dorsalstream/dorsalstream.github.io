@@ -249,8 +249,8 @@ a:focus {
 /* Sidebar masthead */
 .masthead {
   color: #fff;
-  background-color: #011;
-  background-image: url("bug.jpg");
+  background-color: #003;
+  /*background-image: url("bug.jpg");*/
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right top;

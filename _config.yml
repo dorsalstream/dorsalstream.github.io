@@ -1,6 +1,6 @@
 title:        Dorsal Stream
-tagline:      Computer Vision and Machine Learning Stuff
-description:  'Work and ramblings'
+tagline:      ML & CV thoughts, ideas, and rants
+description:  'Computer Vision and Machine Learning'
 url:          http://dorsalstream.net/
 version:      1.0
 
@@ -8,7 +8,7 @@ comments:	  true
 
 markdown: kramdown
 
-highlighter: null
+highlighter: rogue
 
 author:
   name:       'Dushyant Mehta'
