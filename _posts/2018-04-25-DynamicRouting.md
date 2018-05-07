@@ -68,7 +68,7 @@ McGill and Perona explore a similar idea as [3] and evaluate different architect
   <img src="/assets/dynaRoute/dynaroute.jpg" alt="Dynamic Routing" width="70%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig7. Learned dynamic routing. Figure from [5]. </figcaption>
 </figure>
-There are various training policies evaluated to balance the cost of computation and prediction accuracy. An interesting obervation from the paper is that in the beginning of training, the policy chooses shorter paths, going deeper as the training progresses. This seems to have some parallels with [Looks Linear][http://proceedings.mlr.press/v70/balduzzi17b/balduzzi17b.pdf] initialization.
+There are various training policies evaluated to balance the cost of computation and prediction accuracy. An interesting obervation from the paper is that in the beginning of training, the policy chooses shorter paths, going deeper as the training progresses. This seems to have some parallels with [Looks Linear](http://proceedings.mlr.press/v70/balduzzi17b/balduzzi17b.pdf) initialization.
 
 ### .. and more
 There are a few more that are worth mentioning, which I haven't had the time to read in detail yet. We have seen examples with per-example and per-pixel dynamic computation allocation. See [6] [7] for examples of the same in the temporal dimension, and [8] for spatio-temporal routing.
