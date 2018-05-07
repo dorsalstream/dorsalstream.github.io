@@ -9,8 +9,8 @@ id: lr_regular
 author: Dushyant Mehta
 ---
 
-*Draft: Results of LR linked regularization experiments*
+*DRAFT: Results of LR linked regularization experiments*
 
 -----
   
-Hello b;ah b;ha
+Exists as an extended abstract pdf that's awaiting approval from co-authors

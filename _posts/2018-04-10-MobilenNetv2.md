@@ -9,8 +9,8 @@ id: mobilenet
 author: Dushyant Mehta
 ---
 
-*Draft: REducing parameters in MobilenetV2 through replication*
+*DRAFT: REducing parameters in MobilenetV2 through replication*
 
 -----
   
-Hello b;ah b;ha
+Being copied over from notes
