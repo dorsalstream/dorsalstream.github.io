@@ -16,7 +16,7 @@ There are a couple of hinderances to real-time multi-person 3D pose estimation t
 1. Data imbalance is a double whammy because it is usually the difficult to predict cases with complex interaction and occlusion that also have the fewest exemplars. 
 2. Current NN architectures give the benefit of the complete network depth equally to all pixels, which is wasteful and slows things down substantially when full frames need to be processed. See Fig1.
 
- <figure>
+ <figure class="figcenter">
   <img src="/assets/dynaRoute/multi_person.jpg" alt="Multi-person pose example" width="40%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig1. Multiperson pose estimation example from [1] using a fully convolutional network. It would be prudent to not spend as much computation on empty regions in the scene as on the regions containing people. </figcaption>
 </figure> 
@@ -24,17 +24,17 @@ I came up with an idea to address both simultaneously through a combination of s
 
 ### Not All Pixels are Created Equal [2]
 Li et al. propose to speed up and improve the quality of semantic segmentation by allocating computation in accordance with the difficulty of segmentation of various spatial regions in the image. See Fig2.
- <figure>
+ <figure class="figcenter">
   <img src="/assets/dynaRoute/napce.jpg" alt="Not all pixels are created equal" width="60%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig2. Easy, moderate, and difficult to segment regions in an image. Figure from [2]. </figcaption>
 </figure>
 They achieve this through an NN cascade which focuses on progressively difficult regions through the use of region convolutions. See Fig3 and Fig4.
-<figure>
+ <figure class="figcenter">
   <img src="/assets/dynaRoute/napce2.jpg" alt="NN cascade" width="60%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig3. NN cascade with more computation/depth allocated to difficult regions. Figure from [2]. </figcaption>
 </figure>
 The masked cascade design implicitly handles data imbalance issues, with Stage2 and 3 not seeing the loss gradients of difficult examples being drowned out by loss gradients of many more easier examples.
-<figure>
+ <figure class="figcenter">
   <img src="/assets/dynaRoute/napce3.jpg" alt="Region Convolution" width="60%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig4. Region convolution to focus computation on the masked region. Figure from [2]. </figcaption>
 </figure>
@@ -45,7 +45,7 @@ We will see similar themes in other work that we are going to discuss.
 ### I Don't Know Cascades [3]
 Wang et al. have a similar difficulty based computation allocation idea as [2], but instead of per-pixel decisions, the decisions are taken per example.
 The idea of cascades is nothing new, being famously used in [Viola-Jones detector](https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework) for early rejection of negatives. 
-<figure>
+ <figure class="figcenter">
   <img src="/assets/dynaRoute/idk.png" alt="IDK Cascade" width="60%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig5. IDK cascade design, engaging more computation if a simpler model was not confident in its prediction. Figure from [3]. </figcaption>
 </figure>
@@ -54,7 +54,7 @@ Each stage in an IDK cascade outputs a target prediction and an uncertainty sign
 
 ### SkipNet [4]
 From the same first author as [3], this work looks at learning to dynamically engage different layers of the network on a per-input basis. The motivation goes beyond saving computation, and can have the training examples split between combinatorially many implicit networks.
-<figure>
+ <figure class="figcenter">
   <img src="/assets/dynaRoute/skipnet.png" alt="SkipnNet" width="60%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig6. SkipNet, with input dependent activation paths in the network. Figure from [4]. </figcaption>
 </figure>
@@ -64,7 +64,7 @@ It is observed that the network routes difficult examples through more layers, a
 
 ### Deciding How to Decide [5]
 McGill and Perona explore a similar idea as [3] and evaluate different architectural designs and training policies towards a similar end. See Fig7.
-<figure>
+ <figure class="figcenter">
   <img src="/assets/dynaRoute/dynaroute.jpg" alt="Dynamic Routing" width="70%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig7. Learned dynamic routing. Figure from [5]. </figcaption>
 </figure>
