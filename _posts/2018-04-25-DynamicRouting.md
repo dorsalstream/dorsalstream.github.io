@@ -38,9 +38,10 @@ The masked cascade design implicitly handles data imbalance issues, with Stage2 
   <img src="/assets/dynaRoute/napce3.jpg" alt="Region Convolution" width="60%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig4. Region convolution to focus computation on the masked region. Figure from [2]. </figcaption>
 </figure>
-Computational savings come from region convolution (Fig4), which doesn't spend computations on regions that would be masked out.
+Computational savings come from region convolution (Fig4), which doesn't spend computations on regions that would be masked out. The approach uses per pixel classification confidence at each stage to decide whether to engage the subsequent stage. The choice of which stage processes a particular pixel is implicitly dependent on the apparent difficulty of classifying the pixel, and not learned through an explicitly defined objective.
 
-We will see similar themes in other work that we are going to discuss.
+It remains an open problem to extend such an approach to regression problems, and problems where there isn't an image-to-image mapping.
+
 
 ### I Don't Know Cascades [3]
 Wang et al. have a similar difficulty based computation allocation idea as [2], but instead of per-pixel decisions, the decisions are taken per example.
@@ -50,15 +51,19 @@ The idea of cascades is nothing new, being famously used in [Viola-Jones detecto
   <figcaption>Fig5. IDK cascade design, engaging more computation if a simpler model was not confident in its prediction. Figure from [3]. </figcaption>
 </figure>
 
-Each stage in an IDK cascade outputs a target prediction and an uncertainty signal (Fig5). If the uncertainty signal exceeds a threshold, the subsequent stage is engaged. This cascaded design again implicitly addresses data imbalance between easy and difficult targets, and results in amortized computational savings.
+Each stage in an IDK cascade outputs a target prediction and an uncertainty signal (Fig5). If the uncertainty signal exceeds a threshold, the subsequent stage is engaged. This cascaded design does not implicitly addresses data imbalance between easy and difficult targets, though it results in amortized computational savings. Things could be improved though.
+
+The models in the cascade are pre-trained, and various learned selection approached proposed to produce the IDK signal, to jointly optimize the accuracy and the computation cost. This optimization does not modify the models the cascade is composed of.
 
 ### SkipNet [4]
-From the same first author as [3], this work looks at learning to dynamically engage different layers of the network on a per-input basis. The motivation goes beyond saving computation, and can have the training examples split between combinatorially many implicit networks.
+From the same first author as [3], this work looks at learning to dynamically engage different layers of the network on a per-input basis. The motivation goes beyond saving computation, and can have the training examples split between combinatorially many implicit networks. The decision to bypass a particular layer is based on the outputs of the preceding layers.
+
  <figure class="figcenter">
   <img src="/assets/dynaRoute/skipnet.png" alt="SkipnNet" width="60%" display="block" margin-left="auto" margin-right="auto">
   <figcaption>Fig6. SkipNet, with input dependent activation paths in the network. Figure from [4]. </figcaption>
 </figure>
-Since hard gating of layers/blocks is required to be able to see any computational savings, re-inforcement learning is employed. It is observed that it is very hard to train with re-informcement learning when the network starts from a random initialization. Hence the network is pretrained with soft-gating.
+
+Since hard gating of layers/blocks is required to be able to see any computational savings, re-inforcement learning is employed. The paper claims that approximating hard gating using soft gating while training results in low test accuracy. Interestingly, the paper shows that it is hard to train the gating using re-informcement learning when the network starts from a random initialization. Hence the network is pretrained with soft-gating. Also, the training signal is not entirely through REINFORCE, and the main network get its supervision signal through the task objective loss (classification in this case).
 
 It is observed that the network routes difficult examples through more layers, as compared to easier examples.
 
