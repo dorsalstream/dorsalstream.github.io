@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-size: 40px;
+  color: #222;
 }
 h2 {
   margin-top: 20px;
@@ -230,7 +231,7 @@ img {
 
 a {
   font-weight: 600;
-  color: #222;
+  color: #334;
   text-decoration: none;
 }
 a:hover,
@@ -262,6 +263,7 @@ a:focus {
 .masthead h1 {
   margin-top: 0;
   font-family: Georgia;
+  color: #fff;
 }
 .masthead .lead {
   margin-bottom: 0;
@@ -348,6 +350,9 @@ a:focus {
 .post {
   margin-bottom: 40px;
 }
+.post h1 {
+  font-size: 35px;
+}
 @media (min-width: 990px) {
   .post {
     margin-bottom: 60px;
@@ -366,6 +371,7 @@ a:focus {
   padding-top: 20px;
   padding-bottom: 40px;
   border-top: 1px solid #eee;
+  color: #000;
 }
 .related-posts {
   padding-left: 0;
@@ -379,7 +385,7 @@ a:focus {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #000;
+  color: #557;
   text-decoration: none;
 }
 .related-posts li a:hover small {
