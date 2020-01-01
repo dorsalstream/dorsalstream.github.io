@@ -3,13 +3,12 @@ layout: post
 title: Reducing MobileNetV2 Parameter Count by 30%
 tags:
 - deep learning
-- benchmark
 - ideas
 id: mobilenet
 author: Dushyant Mehta
 ---
 
-*Some ideas on reducing the number of parameters in MobilenetV2 by replacing 1x1 expansion convolution with replication with minimal loss of accuracy*
+*Some ideas on reducing the number of parameters in MobilenetV2 by replacing 1x1 expansion convolution with replication with minimal loss of accuracy.*
 
 -----
   
@@ -23,25 +22,25 @@ Fig1. below shows the various bottleneck schemes tested. The affine parameters o
 
 <figure class="figcenter">
   <img src="/assets/mobres/netstruct.png" alt="Proposed modifications to " width="80%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Fig1: Bottleneck module used in MobileNetV2 (a) and the proposed modifications (b), (c), (d). The parameter count is for 32x32 CIFAR10/100 images. The number of parameters at each layer are marked in blue.</figcaption>
+  <figcaption>Fig 1: Bottleneck module used in MobileNetV2 (a) and the proposed modifications (b), (c), (d). The parameter count is for 32x32 CIFAR10/100 images. The number of parameters at each layer are marked in blue.</figcaption>
 </figure> 
 
 ### Experiments 
-The various schemes are evaluated on CIFAR 10 and CIFAR 100, with the core network structure as described in Tab1. The networks are trained in Pytorch using SGD with a mini-batch size of 50, weight decay of 0.0001, and learning rates given in Tab2. The networks parameters are randomly initialized and average of 5 runs reported.
+The various schemes are evaluated on CIFAR 10 and CIFAR 100, with the core network structure as described in Tab 1. The networks are trained in Pytorch using SGD with a mini-batch size of 50, weight decay of 0.0001, and learning rates given in Tab2. The networks parameters are randomly initialized and average of 5 runs reported.
 
 <table class="figtablestyle"> 
 <tr>
 <td>
 <figure class="figcenter">
   <img src="/assets/mobres/netconfig.png" alt="Network configuration" width="60%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Tab1: MobileNetV2 configuration used for CIFAR10/100. Refer to the paper for the meaning of the column headers.</figcaption>
+  <figcaption>Tab 1: MobileNetV2 configuration used for CIFAR10/100. Refer to the paper for the meaning of the column headers.</figcaption>
 </figure> 
 </td>
 
 <td>
 <figure class="figcenter">
   <img src="/assets/mobres/lrscheme.png" alt="learning rate scheme" width="40%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Tab2: Learning rate scheme used for the experiments. Mini-batch size of 50, weight decay of 0.0001.</figcaption>
+  <figcaption>Tab 2: Learning rate scheme used for the experiments. Mini-batch size of 50, weight decay of 0.0001.</figcaption>
 </figure> 
 </td>
 </tr>
@@ -54,13 +53,13 @@ Tab3. shows the relative performance of the networks on CIFAR 10. As the paramet
 <td>
 <figure class="figcenter">
   <img src="/assets/mobres/cifar10.png" alt="CIFAR 10 performance" width="95%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Tab3: Train loss, test loss, and test error for the analysed network configurations on CIFAR 10. Checkpoint at epoch 250, averaged over 5 runs.</figcaption>
+  <figcaption>Tab 3: Train loss, test loss, and test error for the analysed network configurations on CIFAR 10. Checkpoint at epoch 250, averaged over 5 runs.</figcaption>
 </figure> 
 </td>
 <td>
 <figure class="figcenter">
   <img src="/assets/mobres/cifar100.png" alt="CIFAR 100 performance" width="95%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Tab4: Train loss, test loss, and test error for the analysed network configurations on CIFAR 100. Checkpoint at epoch 450, averaged over 5 runs.</figcaption>
+  <figcaption>Tab 4: Train loss, test loss, and test error for the analysed network configurations on CIFAR 100. Checkpoint at epoch 450, averaged over 5 runs.</figcaption>
 </figure> 
 </td>
 </tr>
@@ -69,17 +68,17 @@ Tab3. shows the relative performance of the networks on CIFAR 10. As the paramet
 
 <figure class="figcenter">
   <img src="/assets/mobres/cifar10_all.png" alt="CIFAR 10 All" width="90%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Fig4: The proposed network schemes evaluated on CIFAR 10. Visualized are the best, mean, and worst of the 5 runs per network scheme. The horizontal axis marks the epochs.</figcaption>
+  <figcaption>Fig 4: The proposed network schemes evaluated on CIFAR 10. Visualized are the best, mean, and worst of the 5 runs per network scheme. The horizontal axis marks the epochs.</figcaption>
 </figure> 
 <figure class="figcenter">
   <img src="/assets/mobres/cifar100_all.png" alt="CIFAR 100 All" width="90%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Fig5: The proposed network schemes evaluated on CIFAR 100. Visualized are the best, mean, and worst of the 5 runs per network scheme. The horizontal axis marks the epochs.</figcaption>
+  <figcaption>Fig 5: The proposed network schemes evaluated on CIFAR 100. Visualized are the best, mean, and worst of the 5 runs per network scheme. The horizontal axis marks the epochs.</figcaption>
 </figure> 
 
 ### Timing Benchmarks 
 <figure class="figcenter">
   <img src="/assets/mobres/benchmark.png" alt="Timing benchmarks" width="60%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Fig6: Forward pass and backward pass (in brackets) timing of ResNet50, MobileNetV2, and MobileNetV2 with expansion (b) on various hardware and for various different image resolutions. The timings are in milliseconds. The performance is comparable for small to moderate image resolutions, but the proposed modifications are faster for large image resolutions.</figcaption>
+  <figcaption>Fig 6: Forward pass and backward pass (in brackets) timing of ResNet50, MobileNetV2, and MobileNetV2 with expansion (b) on various hardware and for various different image resolutions. The timings are in milliseconds. The performance is comparable for small to moderate image resolutions, but the proposed modifications are faster for large image resolutions.</figcaption>
 </figure> 
 
 ### Conclusion

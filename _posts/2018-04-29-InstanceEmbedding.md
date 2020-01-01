@@ -8,7 +8,7 @@ id: instance_embedding
 author: Dushyant Mehta
 ---
 
-*Summary of some ideas from current literature on proposal free object detection via instance embedding*
+*Summary of some ideas from current literature on proposal free object detection via instance embedding.*
 
 -----
   
@@ -27,7 +27,7 @@ The clustering takes place within a threshold margin around the cluster represen
 
 <figure class="figcenter">
   <img src="/assets/instaembed/embed_cluster.png" alt="Cluster evolution" width="80%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Fig1: Figure from [5] showing the evolution of the cluster embedding as training progresses. Top row shows the embeddings in 2D space colored by the ground truth labels. As training progresses the embedding separates the pixels into clear clusters. Middle row visualizes the embedding in the image space. Bottom row is the thresholded embedding showing the clusters.</figcaption>
+  <figcaption>Fig 1: Figure from [5] showing the evolution of the cluster embedding as training progresses. Top row shows the embeddings in 2D space colored by the ground truth labels. As training progresses the embedding separates the pixels into clear clusters. Middle row visualizes the embedding in the image space. Bottom row is the thresholded embedding showing the clusters.</figcaption>
 </figure> 
 
 The approach is very similar to Associative Embedding [6].
@@ -38,7 +38,7 @@ Additionally, for each pixel a seediness score is predicted to indicate if the p
 
 <figure class="figcenter">
   <img src="/assets/instaembed/embed_seed.png" alt="schema for instance embedding" width="80%" display="block" margin-left="auto" margin-right="auto">
-  <figcaption>Fig2: Figure from [7] showing joint prediction of per-pixel embedding and a seediness score to determine where to start clustering from.</figcaption>
+  <figcaption>Fig 2: Figure from [7] showing joint prediction of per-pixel embedding and a seediness score to determine where to start clustering from.</figcaption>
 </figure> 
 
 ### Recurrent Pixel Embedding for Instance Grouping [8]

@@ -296,7 +296,7 @@ a:focus {
     padding: 40px;
   }
 }
-@media (min-width: 1090px) {
+@media (min-width: 1190px) {
   /* Fix the masthead to the side for impact and awesomeness */
   .masthead {
     position: fixed;
@@ -332,7 +332,7 @@ a:focus {
 }
 
 /* Center container in available real estate */
-@media (min-width: 1090px) {
+@media (min-width: 1190px) {
   .content {
     padding: 60px 0;
   }

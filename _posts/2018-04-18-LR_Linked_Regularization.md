@@ -9,8 +9,8 @@ id: lr_regular
 author: Dushyant Mehta
 ---
 
-*DRAFT: Results of LR linked regularization experiments*
+Summary of some experiments concerning increasing the explicit regularization as the learning rate is decreased in the hopes of achieving better generalization performance. 
 
 -----
   
-Exists as an extended abstract pdf that's awaiting approval from co-authors
+[Extended abstract PDF](/assets/lrLinked/Learning_Rate_Linked_Regularization_.pdf) (Couldn't be bothered to copy it all here)
